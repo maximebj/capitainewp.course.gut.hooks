@@ -7,7 +7,7 @@ import { __ } from "@wordpress/i18n";
 const allowedBlocks = ["core/button"];
 
 function addAttributes(settings, name) {
-  if (allowedBlocks.includes(name)) {
+  if (!allowedBlocks.includes(name)) {
     return settings;
   }
 
@@ -75,6 +75,7 @@ function applyExtraClass(extraProps, blockType, attributes) {
   if (!allowedBlocks.includes(blockType.name)) {
     return extraProps;
   }
+
   const { size } = attributes;
   extraProps.className += ` has-size-${size}`;
   return extraProps;

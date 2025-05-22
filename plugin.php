@@ -36,3 +36,35 @@ function capitainewp_hooks_enqueue_block_editor_assets()
 	);
 }
 add_action('enqueue_block_editor_assets', 'capitainewp_hooks_enqueue_block_editor_assets');
+
+
+# Charger le CSS seulement si le bloc est utilisé dans la page
+function capitaine_hooks_register_blocks_assets()
+{
+	wp_enqueue_block_style(
+		"core/button",
+		[
+			"handle" => "capitaine-hooks-core-button",
+			"src"    => plugins_url("assets/css/core-button.css", __FILE__),
+			"path"   => plugin_dir_path(__FILE__) . "assets/css/core-button.css",
+			"ver"    => filemtime(plugin_dir_path(__FILE__) . "assets/css/core-button.css")
+		]
+	);
+}
+add_action("init", "capitaine_hooks_register_blocks_assets");
+
+
+# Charger le CSS dans l'admin seulement si le bloc est utilisé dans la page
+function capitaine_hooks_register_blocks_assets_admin()
+{
+	wp_enqueue_block_style(
+		"core/button",
+		[
+			"handle" => "capitaine-hooks-core-button-admin",
+			"src"    => plugins_url("assets/css/core-button-editor.css", __FILE__),
+			"path"   => plugin_dir_path(__FILE__) . "assets/css/core-button-editor.css",
+			"ver"    => filemtime(plugin_dir_path(__FILE__) . "assets/css/core-button-editor.css")
+		]
+	);
+}
+add_action("enqueue_block_editor_assets", "capitaine_hooks_register_blocks_assets_admin");

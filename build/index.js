@@ -156,9 +156,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const allowedBlocks = ["core/button"];
-console.log("je suis chargé");
 function addAttributes(settings, name) {
-  if (allowedBlocks.includes(name)) {
+  if (!allowedBlocks.includes(name)) {
     return settings;
   }
   settings.attributes = Object.assign(settings.attributes, {
