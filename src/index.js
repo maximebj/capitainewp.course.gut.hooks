@@ -4,8 +4,10 @@ import { createHigherOrderComponent } from "@wordpress/compose";
 import { addFilter } from "@wordpress/hooks";
 import { __ } from "@wordpress/i18n";
 
+// Le bloc que l'on souhaite modifier
 const allowedBlocks = ["core/button"];
 
+// Ajouter des attributs au bloc
 function addAttributes(settings, name) {
   if (!allowedBlocks.includes(name)) {
     return settings;
@@ -27,6 +29,7 @@ addFilter(
   addAttributes
 );
 
+// Ajouter des contrôles dans l'inspecteur du bloc
 const withAdvancedControls = createHigherOrderComponent(BlockEdit => {
   return props => {
     const { name, attributes, setAttributes, isSelected } = props;
@@ -71,6 +74,7 @@ const withAdvancedControls = createHigherOrderComponent(BlockEdit => {
 
 addFilter("editor.BlockEdit", "capitainewp/addControls", withAdvancedControls);
 
+// Ajouter des classes au bloc
 function applyExtraClass(extraProps, blockType, attributes) {
   if (!allowedBlocks.includes(blockType.name)) {
     return extraProps;
