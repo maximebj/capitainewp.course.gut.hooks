@@ -17,7 +17,7 @@
 defined("ABSPATH") || exit;
 
 
-# Charger le scrip de hook dans l'éditeur
+# Charger le script de hook dans l'éditeur
 function capitainewp_hooks_enqueue_block_editor_assets()
 {
 	$asset_file_path = plugin_dir_path(__FILE__) . "build/index.asset.php";
