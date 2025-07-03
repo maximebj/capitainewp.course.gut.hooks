@@ -1,18 +1,18 @@
 import { registerBlockVariation } from "@wordpress/blocks";
 
-const MY_VARIATION_NAME = "my-plugin/books-list";
+const NAMESPACE = "capitainewp/games-list";
 
 registerBlockVariation("core/query", {
-  name: MY_VARIATION_NAME,
+  name: NAMESPACE,
   title: "Games List",
   description: "Displays a list of games",
   category: "capitainewp",
   isActive: ({ namespace, query }) => {
-    return namespace === MY_VARIATION_NAME && query.postType === "games";
+    return namespace === NAMESPACE && query.postType === "games";
   },
   icon: "games",
   attributes: {
-    namespace: MY_VARIATION_NAME,
+    namespace: NAMESPACE,
     query: {
       perPage: 3,
       pages: 0,
@@ -27,5 +27,5 @@ registerBlockVariation("core/query", {
       inherit: false,
     },
   },
-  scope: ["inserter", "transform"],
+  scope: ["inserter", "transform", "block"],
 });

@@ -131,9 +131,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
 
-const MY_VARIATION_NAME = "my-plugin/books-list";
+const NAMESPACE = "capitainewp/games-list";
 (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockVariation)("core/query", {
-  name: MY_VARIATION_NAME,
+  name: NAMESPACE,
   title: "Games List",
   description: "Displays a list of games",
   category: "capitainewp",
@@ -141,11 +141,11 @@ const MY_VARIATION_NAME = "my-plugin/books-list";
     namespace,
     query
   }) => {
-    return namespace === MY_VARIATION_NAME && query.postType === "games";
+    return namespace === NAMESPACE && query.postType === "games";
   },
   icon: "games",
   attributes: {
-    namespace: MY_VARIATION_NAME,
+    namespace: NAMESPACE,
     query: {
       perPage: 3,
       pages: 0,
@@ -160,7 +160,7 @@ const MY_VARIATION_NAME = "my-plugin/books-list";
       inherit: false
     }
   },
-  scope: ["inserter", "transform"]
+  scope: ["inserter", "transform", "block"]
 });
 
 /***/ }),
