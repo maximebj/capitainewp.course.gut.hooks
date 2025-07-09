@@ -72,18 +72,18 @@ const withAdvancedControls = (0,_wordpress_compose__WEBPACK_IMPORTED_MODULE_2__.
         ...props
       }), isSelected && allowedBlocks.includes(name) && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.InspectorControls, {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.PanelBody, {
-          title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)("Button Size", "capitainewp"),
+          title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)("Button Size", "capitainewp-hooks"),
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.SelectControl, {
-            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)("Size", "capitainewp"),
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)("Size", "capitainewp-hooks"),
             value: size,
             options: [{
-              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)("Small", "capitainewp"),
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)("Small", "capitainewp-hooks"),
               value: "small"
             }, {
-              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)("Medium", "capitainewp"),
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)("Medium", "capitainewp-hooks"),
               value: "medium"
             }, {
-              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)("Large", "capitainewp"),
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)("Large", "capitainewp-hooks"),
               value: "large"
             }],
             onChange: size => {

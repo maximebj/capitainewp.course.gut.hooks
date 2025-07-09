@@ -47,21 +47,21 @@ const withAdvancedControls = createHigherOrderComponent(BlockEdit => {
         <BlockEdit {...props} />
         {isSelected && allowedBlocks.includes(name) && (
           <InspectorControls>
-            <PanelBody title={__("Button Size", "capitainewp")}>
+            <PanelBody title={__("Button Size", "capitainewp-hooks")}>
               <SelectControl
-                label={__("Size", "capitainewp")}
+                label={__("Size", "capitainewp-hooks")}
                 value={size}
                 options={[
                   {
-                    label: __("Small", "capitainewp"),
+                    label: __("Small", "capitainewp-hooks"),
                     value: "small",
                   },
                   {
-                    label: __("Medium", "capitainewp"),
+                    label: __("Medium", "capitainewp-hooks"),
                     value: "medium",
                   },
                   {
-                    label: __("Large", "capitainewp"),
+                    label: __("Large", "capitainewp-hooks"),
                     value: "large",
                   },
                 ]}
