@@ -14,6 +14,9 @@ build/Release
 # Dependency directories
 node_modules/
 
+# Build générée par wp-scripts (npm run start / npm run build)
+build/
+
 # Optional npm cache directory
 .npm
 
